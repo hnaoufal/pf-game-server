@@ -6,23 +6,21 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class User {
+public class Ranking {
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Getter
     @Setter
     private Integer id;
 
+    @OneToOne
+    @JoinColumn(name="user_id")
     @Getter
     @Setter
-    private String name;
+    private User user;
 
     @Getter
     @Setter
-    private String password;
-
-    @Getter
-    @Setter
-    private String email;
+    private String points;
 }
+

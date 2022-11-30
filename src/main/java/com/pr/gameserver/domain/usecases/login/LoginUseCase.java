@@ -1,4 +1,4 @@
-package com.pr.gameserver.domain.usecases;
+package com.pr.gameserver.domain.usecases.login;
 
 import lombok.Getter;
 

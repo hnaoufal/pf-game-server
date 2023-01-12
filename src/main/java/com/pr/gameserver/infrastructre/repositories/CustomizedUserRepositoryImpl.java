@@ -2,11 +2,13 @@ package com.pr.gameserver.infrastructre.repositories;
 
 import com.pr.gameserver.domain.entries.User;
 import com.pr.gameserver.domain.ports.users.CustomizedUserRepository;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+@Repository
 public class CustomizedUserRepositoryImpl implements CustomizedUserRepository {
     @PersistenceContext
     private EntityManager entityManager;

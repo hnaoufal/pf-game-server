@@ -1,20 +1,16 @@
-package com.pr.gameserver.application.controller;
+package com.pr.gameserver.application.controller.users.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @AllArgsConstructor
-public class CreateUserDTO {
+public class UserDTO {
     @Getter
     @Setter
-    public Integer id;
+    public String email;
 
     @Getter
     @Setter
     public String name;
-
-    @Getter
-    @Setter
-    public String email;
 }

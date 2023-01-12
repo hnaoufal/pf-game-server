@@ -14,7 +14,6 @@ public class CustomizedUserRepositoryImpl implements CustomizedUserRepository {
     @Override
     @Transactional()
     public User findByEmail(String email) {
-        System.err.println("Hicham " + email);
         User n = entityManager.createQuery(
                         "SELECT e FROM User e WHERE e.email = :email", User.class)
                 .setParameter("email", email)

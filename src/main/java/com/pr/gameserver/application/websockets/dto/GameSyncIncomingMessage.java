@@ -3,10 +3,7 @@ package com.pr.gameserver.application.websockets.dto;
 public class GameSyncIncomingMessage {
     private String name;
 
-    public void HelloMessage() {
-    }
-
-    public void HelloMessage(String name) {
+    public GameSyncIncomingMessage(String name) {
         this.name = name;
     }
 

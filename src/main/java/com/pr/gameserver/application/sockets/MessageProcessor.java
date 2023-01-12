@@ -18,7 +18,7 @@ public class MessageProcessor {
             client = server.accept();
             System.out.println("Client connected");
 
-            // Start Game here
+            // Start Game here <---
 
             client.close();
             server.close();

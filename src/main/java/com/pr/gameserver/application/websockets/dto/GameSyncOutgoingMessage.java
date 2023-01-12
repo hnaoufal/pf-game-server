@@ -1,7 +1,7 @@
 package com.pr.gameserver.application.websockets.dto;
 
 public class GameSyncOutgoingMessage {
-    private String content;
+    private final String content;
 
     public GameSyncOutgoingMessage(String s) {
         this.content = s;

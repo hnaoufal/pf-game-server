@@ -14,8 +14,15 @@ public class UserController {
     private UserInteractor userInteractor;
 
     @PostMapping(path="/api/users") // Map ONLY POST Requests
-    public @ResponseBody CreateUserDTO addNewUser (@RequestParam String name, @RequestParam String email, @RequestParam String password) {
-        return userInteractor.addUserUseCase(name, email, password);
+    public @ResponseBody String addNewUser (@RequestParam String name, @RequestParam String email, @RequestParam String password) {
+        // Prüfung, ob die Emailadresse bereit in der Datenbank vorhanden ist
+        if(userInteractor.checkUserUnique(email)){
+            userInteractor.addUserUseCase(name, email, password); // Neuen Benutzer in der Datenbank anlegen
+            return "Neuer Benutzer erfolgreich angelegt!";
+        }
+        else{
+            return "Dieser Benutzer existiert bereits!";
+        }
     }
 
     @GetMapping(path="/api/users")

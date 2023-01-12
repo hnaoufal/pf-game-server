@@ -17,6 +17,18 @@ public class UserInteractor implements AllUsersUseCase {
     @Autowired
     private UserRepository userRepository;
 
+    /* Bestimmt, ob eine Emailadresse noch nicht in der Datenbank vorhanden ist
+     * returned true, wenn die Emailadresse noch nicht vorhanden ist
+     * returned false, wenn die Emailadresse bereits vorhanden ist
+     */
+    public boolean checkUserUnique(String email){
+        if(this.userRepository.findByEmail(email) == null){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public CreateUserDTO addUserUseCase(String name,String email,String password) {
         User n = new User();
         n.setName(name);

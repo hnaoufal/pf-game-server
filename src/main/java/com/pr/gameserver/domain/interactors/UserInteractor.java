@@ -17,26 +17,19 @@ public class UserInteractor implements AllUsersUseCase {
     @Autowired
     private UserRepository userRepository;
 
-    /* Bestimmt, ob eine Emailadresse noch nicht in der Datenbank vorhanden ist
-     * returned true, wenn die Emailadresse noch nicht vorhanden ist
-     * returned false, wenn die Emailadresse bereits vorhanden ist
-     */
-    public boolean checkUserUnique(String email){
-        if(this.userRepository.findByEmail(email) == null){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
     public CreateUserDTO addUserUseCase(String name,String email,String password) {
-        User n = new User();
-        n.setName(name);
-        n.setPassword(password);
-        n.setEmail(email);
-        userRepository.save(n);
+        if(this.findUserByMail(email) == null) {
+            User n = new User();
+            n.setName(name);
+            n.setPassword(password);
+            n.setEmail(email);
+            userRepository.save(n);
 
-        return new CreateUserDTO(n.getId(), n.getName(), n.getEmail(), n.getPassword());
+            return new CreateUserDTO(n.getId(), n.getName(), n.getEmail(), n.getPassword());
+        }
+
+        // don't tell the user, that user exists (security issue)
+        throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Something went wrong");
     }
 
     public Iterable<User> getUsersUseCase() {
@@ -44,12 +37,16 @@ public class UserInteractor implements AllUsersUseCase {
     }
 
     public UserDTO loginUseCase(String email, String password) {
-        User n = this.userRepository.findByEmail(email);
+        User n = this.findUserByMail(email);
 
         if (!Objects.isNull(n) && Objects.equals(password, n.getPassword())) {
             return new UserDTO(n.getEmail(), n.getName());
         }
 
         throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Access Denied");
+    }
+
+    private User findUserByMail(String email) {
+        return userRepository.findByEmail(email);
     }
 }

@@ -2,7 +2,7 @@ package com.pr.gameserver.domain.ports.ranking;
 
 import com.pr.gameserver.domain.entries.Ranking;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface RankingRepository extends CrudRepository<Ranking, Integer> {
-
-}
+@Repository
+public interface RankingRepository extends CrudRepository<Ranking, Integer> { }

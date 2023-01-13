@@ -10,6 +10,6 @@ public class StaticData {
     public static final int SCORE_FOR_WIN = 20; //100
 
     public static String getServerAdress(String hostname) {
-        return "ws://" + hostname + ":" + SERVER_PORT + SERVER_CONTEXT_PATH;
+        return "ws://" + hostname + ":" + SERVER_PORT + SERVER_CONTEXT_PATH + REGION_PATH;
     }
 }

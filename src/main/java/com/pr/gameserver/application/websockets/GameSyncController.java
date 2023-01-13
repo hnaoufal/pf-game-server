@@ -12,7 +12,9 @@ public class GameSyncController {
     @MessageMapping("/hello")
     @SendTo("/topic/greetings")
     public GameSyncOutgoingMessage greeting(GameSyncIncomingMessage message) throws Exception {
+        Thread.sleep(1000); // simulated delay
         Thread.sleep(1000);
         return new GameSyncOutgoingMessage("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
     }
 }
+

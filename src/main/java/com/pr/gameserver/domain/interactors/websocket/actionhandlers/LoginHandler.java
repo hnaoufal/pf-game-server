@@ -18,7 +18,12 @@ public class LoginHandler extends MessageHandler<LoginMessage> {
     @Override
     protected void handle(Session session, LoginMessage object) {
         final boolean isAddUser = UserInfoHelper.getInstance().createNewUser(object.getLogin());
+        String login = object.getLogin();
         if (isAddUser) {
+            System.out.println("User is there");
+            ServerController.getInstance().addUser(login, session);
+            ServerController.getInstance().send(login, new LoginIndicatorMsg(true));
+            ServerController.getInstance().sendAll(UserInfoHelper.getInstance());
         } else {
             try {
                 ServerController.getInstance().send(session, new LoginIndicatorMsg(false));

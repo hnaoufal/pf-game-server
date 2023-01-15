@@ -16,7 +16,7 @@ public class WsServerEndpoint {
 
     @OnMessage
     public String onMessage(Session session, String message) {
-        log.debug("WebServer received request for: " + message + " being processed for session " + session.getId());
+        log.info("WebServer received request for: " + message + " being processed for session " + session.getId());
         serverMessageHandler.handle(session, message);
         return "Hello " + message;
     }

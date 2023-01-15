@@ -2,6 +2,7 @@ package com.pr.gameserver.application.controller.users;
 
 import com.pr.gameserver.application.controller.users.dto.CreateUserDTO;
 import com.pr.gameserver.application.controller.users.dto.LoginDTO;
+import com.pr.gameserver.application.controller.users.dto.RegisterDTO;
 import com.pr.gameserver.application.controller.users.dto.UserDTO;
 import com.pr.gameserver.domain.entries.User;
 import com.pr.gameserver.domain.interactors.UserInteractor;
@@ -14,8 +15,8 @@ public class UserController {
     private UserInteractor userInteractor;
 
     @PostMapping(path="/api/users")
-    public @ResponseBody CreateUserDTO addNewUser (@RequestParam String name, @RequestParam String email, @RequestParam String password) {
-        return userInteractor.addUserUseCase(name, email, password);
+    public @ResponseBody CreateUserDTO addNewUser (@RequestBody RegisterDTO body) {
+        return userInteractor.addUserUseCase(body.name, body.email, body.password);
     }
 
     @GetMapping(path="/api/users")

@@ -1,6 +1,6 @@
-package com.pr.gameserver.application.websockets.server;
+package com.pr.gameserver.application.websockets;
 
-import com.pr.gameserver.application.websockets.common.msginteraction.generic.Message;
+import com.pr.gameserver.domain.interactors.websocket.messagehandlers.Message;
 import jakarta.websocket.Session;
 
 import java.io.IOException;

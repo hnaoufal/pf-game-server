@@ -1,4 +1,4 @@
-package com.pr.gameserver.application.websockets.common.msginteraction.generic;
+package com.pr.gameserver.domain.interactors.websocket.messagehandlers;
 
 import jakarta.websocket.Session;
 
@@ -8,7 +8,7 @@ import java.util.Map;
 public abstract class AllMessageHandler {
     private final Map<String, MessageHandler> handleMap = new HashMap<>();
 
-    public AllMessageHandler() {
+    protected AllMessageHandler() {
         initHandleMap(handleMap);
     }
 

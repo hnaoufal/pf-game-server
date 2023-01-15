@@ -1,8 +1,8 @@
 package com.pr.gameserver.application.websockets.server;
 
-import com.pr.gameserver.application.websockets.common.StaticData;
-import com.pr.gameserver.application.websockets.common.msginteraction.UserInfoHelper;
-import com.pr.gameserver.application.websockets.server.msginteraction.ServerMessageHandler;
+import com.pr.gameserver.application.config.StaticData;
+import com.pr.gameserver.domain.gameengine.UserInfoHelper;
+import com.pr.gameserver.domain.interactors.websocket.ServerMessageHandler;
 import jakarta.websocket.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

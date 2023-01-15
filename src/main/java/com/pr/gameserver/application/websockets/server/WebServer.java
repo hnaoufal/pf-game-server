@@ -1,6 +1,6 @@
 package com.pr.gameserver.application.websockets.server;
 
-import com.pr.gameserver.application.websockets.common.StaticData;
+import com.pr.gameserver.application.config.StaticData;
 import jakarta.websocket.DeploymentException;
 import org.glassfish.tyrus.server.Server;
 import org.slf4j.Logger;

@@ -1,21 +1,19 @@
-package com.pr.gameserver.application.websockets.server;
+package com.pr.gameserver.domain.gameengine;
 
-import com.pr.gameserver.application.websockets.common.StaticData;
-import com.pr.gameserver.application.websockets.common.UserInfo;
-import com.pr.gameserver.application.websockets.common.msginteraction.UserInfoHelper;
-import com.pr.gameserver.application.websockets.common.msginteraction.message.ReceiveScore;
+import com.pr.gameserver.application.config.StaticData;
+import com.pr.gameserver.domain.usecases.websocket.ReceiveScore;
 
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
-public class GameInfo {
+public class GameEngine {
     private static final int MAX_WAIT = StaticData.MAX_WAIT_SEC;
     private static final int SCORE_FOR_WIN = StaticData.SCORE_FOR_WIN;
-    private static GameInfo gameInfo = new GameInfo();
-    public static GameInfo getInstance() {
+    private static GameEngine gameInfo = new GameEngine();
+    public static GameEngine getInstance() {
         return gameInfo;
     }
-    private GameInfo() {
+    private GameEngine() {
     }
 
     boolean isDone;

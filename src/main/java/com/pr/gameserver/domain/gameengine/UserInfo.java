@@ -1,4 +1,4 @@
-package com.pr.gameserver.application.websockets.common;
+package com.pr.gameserver.domain.gameengine;
 
 public class UserInfo {
     private String login;

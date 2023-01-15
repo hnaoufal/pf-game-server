@@ -1,6 +1,6 @@
 package com.pr.gameserver;
 
-import com.pr.gameserver.application.sockets.MessageProcessor;
+import com.pr.gameserver.application.sockets.server.MessageProcessor;
 import com.pr.gameserver.application.websockets.server.WebServer;
 import jakarta.websocket.DeploymentException;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GameServerApplication {
 
 	public static void main(String[] args) {
+		// Runs the Websocket connection
 		WebServer wsServer = new WebServer();
 
 		try {
@@ -17,9 +18,11 @@ public class GameServerApplication {
 		} catch (DeploymentException e) {
 			throw new RuntimeException(e);
 		}
+
 		// Run Spring Boot
 		SpringApplication.run(GameServerApplication.class, args);
 
+		// Runs the Socket LAN connection
 		MessageProcessor.init();
 	}
 

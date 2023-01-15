@@ -1,10 +1,10 @@
-package com.pr.gameserver.application.websockets.common.msginteraction.generic;
+package com.pr.gameserver.domain.interactors.websocket.messagehandlers;
 
 import com.google.gson.Gson;
 import jakarta.websocket.Session;
 
 public abstract class MessageHandler<T> {
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     public final void run(Session session, String message) {
         final T object = gson.fromJson(message, getMessageClass());

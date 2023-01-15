@@ -1,10 +1,10 @@
-package com.pr.gameserver.application.websockets.server.msginteraction.handler;
+package com.pr.gameserver.domain.interactors.websocket.actionhandlers;
 
-import com.pr.gameserver.application.websockets.common.msginteraction.UserInfoHelper;
-import com.pr.gameserver.application.websockets.common.msginteraction.generic.MessageHandler;
-import com.pr.gameserver.application.websockets.common.msginteraction.message.LoginIndicatorMsg;
-import com.pr.gameserver.application.websockets.common.msginteraction.message.LoginMessage;
-import com.pr.gameserver.application.websockets.server.ServerController;
+import com.pr.gameserver.domain.gameengine.UserInfoHelper;
+import com.pr.gameserver.domain.interactors.websocket.messagehandlers.MessageHandler;
+import com.pr.gameserver.domain.usecases.websocket.LoginIndicatorMsg;
+import com.pr.gameserver.domain.usecases.websocket.LoginMessage;
+import com.pr.gameserver.application.websockets.ServerController;
 import jakarta.websocket.Session;
 
 import java.io.IOException;

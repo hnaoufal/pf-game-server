@@ -1,6 +1,4 @@
-package com.pr.gameserver.application.websockets.common.msginteraction;
-
-import com.pr.gameserver.application.websockets.common.UserInfo;
+package com.pr.gameserver.domain.gameengine;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;

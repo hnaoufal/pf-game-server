@@ -1,4 +1,4 @@
-package com.pr.gameserver.application.websockets.common.msginteraction.message;
+package com.pr.gameserver.domain.usecases.websocket;
 
 import java.util.Random;
 

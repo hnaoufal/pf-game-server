@@ -1,4 +1,4 @@
-package com.pr.gameserver.application.sockets;
+package com.pr.gameserver.application.sockets.server;
 
 import java.io.IOException;
 import java.net.ServerSocket;

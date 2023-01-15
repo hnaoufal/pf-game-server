@@ -1,4 +1,4 @@
-package com.pr.gameserver.application.websockets.common;
+package com.pr.gameserver.application.config;
 
 public class StaticData {
     public static final int SERVER_PORT = 8888;

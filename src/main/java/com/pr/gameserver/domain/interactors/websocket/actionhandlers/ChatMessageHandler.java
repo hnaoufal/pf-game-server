@@ -17,7 +17,6 @@ public class ChatMessageHandler extends MessageHandler<ChatMessage> {
 
     @Override
     protected void handle(Session session, ChatMessage object) {
-        ServerController.getInstance().sendAll(object);
-        ServerController.getInstance().send(session, object);
+        ServerController.getInstance().sendAllExceptCurrentUser(session, object);
     }
 }

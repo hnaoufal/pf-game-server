@@ -40,7 +40,7 @@ public class UserInteractor implements AllUsersUseCase {
         User n = this.findUserByMail(email);
 
         if (!Objects.isNull(n) && Objects.equals(password, n.getPassword())) {
-            return new UserDTO(n.getEmail(), n.getName());
+            return new UserDTO(n.getEmail(), n.getName(), n.getId());
         }
 
         throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Access Denied");

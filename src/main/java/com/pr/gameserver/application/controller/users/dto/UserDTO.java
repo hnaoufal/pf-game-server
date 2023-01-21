@@ -13,4 +13,8 @@ public class UserDTO {
     @Getter
     @Setter
     public String name;
+
+    @Getter
+    @Setter
+    public Long id;
 }

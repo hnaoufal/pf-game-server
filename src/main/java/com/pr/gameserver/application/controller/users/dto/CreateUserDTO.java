@@ -8,7 +8,7 @@ import lombok.Setter;
 public class CreateUserDTO {
     @Getter
     @Setter
-    public Integer id;
+    public Long id;
 
     @Getter
     @Setter

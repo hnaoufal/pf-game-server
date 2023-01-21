@@ -23,7 +23,6 @@ public class WsServerEndpoint {
 
     @OnOpen
     public void onOpen(Session session) throws IOException {
-        System.out.println("huhuhu");
         session.getBasicRemote().sendText("onOpen");
     }
 

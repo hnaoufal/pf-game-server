@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class ServerController {
     private static ServerController serverController = new ServerController();
@@ -48,6 +49,18 @@ public class ServerController {
         for (Session session : this.getSessionList().values()) {
             try {
                 session.getBasicRemote().sendText(Message.toStringMessage(object));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void sendAllExceptCurrentUser(Session currentSession, Object object) {
+        for (Session session : this.getSessionList().values()) {
+            try {
+                if (!Objects.equals(currentSession.getId(), session.getId())) {
+                    session.getBasicRemote().sendText(Message.toStringMessage(object));
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }

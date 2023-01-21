@@ -37,7 +37,7 @@ public class UserInfoHelper {
     }
 
     public UserInfo getUserInfoByLogin(String login) {
-        if(userInfoList.size()==0) {
+        if(userInfoList.isEmpty()) {
             return null;
         }
         try {

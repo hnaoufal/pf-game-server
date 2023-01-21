@@ -1,6 +1,6 @@
 package com.pr.gameserver.application.websockets;
 
-import com.pr.gameserver.domain.interactors.websocket.messagehandlers.Message;
+import com.pr.gameserver.domain.interactors.websocket.helpers.Message;
 import jakarta.websocket.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class ServerController {
-    private static ServerController serverController = new ServerController();
+    private static final ServerController serverController = new ServerController();
     private static final Logger log = LoggerFactory.getLogger(ServerController.class);
 
     public static ServerController getInstance() {

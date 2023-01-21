@@ -1,4 +1,4 @@
-package com.pr.gameserver.domain.entries;
+package com.pr.gameserver.domain.entities;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,21 +6,23 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class Ranking {
+public class User {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Getter
     @Setter
-    private Integer id;
-
-    @OneToOne
-    @JoinColumn(name="user_id")
-    @Getter
-    @Setter
-    private User user;
+    private Long id;
 
     @Getter
     @Setter
-    private String points;
+    private String name;
+
+    @Getter
+    @Setter
+    private String password;
+
+    @Getter
+    @Setter
+    private String email;
 }
-

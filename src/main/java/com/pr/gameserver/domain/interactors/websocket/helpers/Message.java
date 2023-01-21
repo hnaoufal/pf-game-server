@@ -1,4 +1,4 @@
-package com.pr.gameserver.domain.interactors.websocket.messagehandlers;
+package com.pr.gameserver.domain.interactors.websocket.helpers;
 
 import com.google.gson.Gson;
 
@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Message {
     private static final String SEPARATOR = "|";
     private static final String split = Pattern.quote(SEPARATOR);
-    private static Gson gson = new Gson();
+    private static final Gson gson = new Gson();
     public static String toStringMessage(Object object) {
         return object.getClass().getSimpleName() + SEPARATOR + gson.toJson(object);
     }

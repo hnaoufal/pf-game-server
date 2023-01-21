@@ -28,7 +28,7 @@ public class WsServerEndpoint {
 
     @OnClose
     public void onClose(Session session, CloseReason reason) throws IOException {
-        String login = null;
+        String login = session.getId();
         if(login != null) {
             final UserInfoHelper userInfoHelper = UserInfoHelper.getInstance();
             userInfoHelper.getUserInfoByLogin(login).setIsOnline(false);

@@ -4,7 +4,7 @@ import com.pr.gameserver.application.controller.users.dto.CreateUserDTO;
 import com.pr.gameserver.application.controller.users.dto.LoginDTO;
 import com.pr.gameserver.application.controller.users.dto.RegisterDTO;
 import com.pr.gameserver.application.controller.users.dto.UserDTO;
-import com.pr.gameserver.domain.entries.User;
+import com.pr.gameserver.domain.entities.User;
 import com.pr.gameserver.domain.interactors.UserInteractor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

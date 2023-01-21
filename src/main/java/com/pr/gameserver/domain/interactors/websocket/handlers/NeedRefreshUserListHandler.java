@@ -1,7 +1,7 @@
-package com.pr.gameserver.domain.interactors.websocket.actionhandlers;
+package com.pr.gameserver.domain.interactors.websocket.handlers;
 
-import com.pr.gameserver.domain.interactors.websocket.messagehandlers.MessageHandler;
-import com.pr.gameserver.domain.usecases.websocket.NeedRefreshUserListMsg;
+import com.pr.gameserver.domain.interactors.websocket.helpers.MessageHandler;
+import com.pr.gameserver.domain.entities.messages.NeedRefreshUserListMsg;
 import jakarta.websocket.Session;
 
 public class NeedRefreshUserListHandler extends MessageHandler<NeedRefreshUserListMsg> {

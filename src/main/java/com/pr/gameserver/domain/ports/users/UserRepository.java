@@ -1,6 +1,6 @@
 package com.pr.gameserver.domain.ports.users;
 
-import com.pr.gameserver.domain.entries.User;
+import com.pr.gameserver.domain.entities.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

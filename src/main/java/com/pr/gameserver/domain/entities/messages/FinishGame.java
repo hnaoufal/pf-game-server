@@ -1,4 +1,4 @@
-package com.pr.gameserver.domain.usecases.websocket;
+package com.pr.gameserver.domain.entities.messages;
 
 public class FinishGame {
     String winnerLogin;

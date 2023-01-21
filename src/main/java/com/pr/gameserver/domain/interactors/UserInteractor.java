@@ -2,7 +2,7 @@ package com.pr.gameserver.domain.interactors;
 
 import com.pr.gameserver.application.controller.users.dto.CreateUserDTO;
 import com.pr.gameserver.application.controller.users.dto.UserDTO;
-import com.pr.gameserver.domain.entries.User;
+import com.pr.gameserver.domain.entities.User;
 import com.pr.gameserver.domain.ports.users.UserRepository;
 import com.pr.gameserver.domain.usecases.user.AllUsersUseCase;
 import org.springframework.beans.factory.annotation.Autowired;

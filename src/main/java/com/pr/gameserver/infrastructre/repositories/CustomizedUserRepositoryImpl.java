@@ -1,6 +1,6 @@
 package com.pr.gameserver.infrastructre.repositories;
 
-import com.pr.gameserver.domain.entries.User;
+import com.pr.gameserver.domain.entities.User;
 import com.pr.gameserver.domain.ports.users.CustomizedUserRepository;
 import org.springframework.stereotype.Repository;
 

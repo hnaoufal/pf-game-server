@@ -1,7 +1,7 @@
 package com.pr.gameserver.domain.interactors;
 
-import com.pr.gameserver.domain.entries.Ranking;
-import com.pr.gameserver.domain.entries.User;
+import com.pr.gameserver.domain.entities.Ranking;
+import com.pr.gameserver.domain.entities.User;
 import com.pr.gameserver.domain.ports.ranking.RankingRepository;
 import com.pr.gameserver.domain.ports.users.UserRepository;
 import com.pr.gameserver.domain.usecases.ranking.AllRankingUseCases;

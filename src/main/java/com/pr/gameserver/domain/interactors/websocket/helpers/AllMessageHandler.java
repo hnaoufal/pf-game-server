@@ -1,4 +1,4 @@
-package com.pr.gameserver.domain.interactors.websocket.messagehandlers;
+package com.pr.gameserver.domain.interactors.websocket.helpers;
 
 import jakarta.websocket.Session;
 

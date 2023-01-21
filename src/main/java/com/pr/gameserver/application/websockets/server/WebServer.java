@@ -14,7 +14,7 @@ public class WebServer {
 
     private Server server;
 
-    public static final String SERVER_ADDRESS = StaticData.getServerAdress(SERVER_HOSTNAME);
+    public static final String SERVER_ADDRESS = StaticData.getServerAddress(SERVER_HOSTNAME);
 
     /**
      * Starts the server executing.
@@ -36,6 +36,7 @@ public class WebServer {
             try {
                 server.start();
             } catch(DeploymentException e) {
+                log.info("Error " + e.getMessage());
             }
     }
 

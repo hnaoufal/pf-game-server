@@ -1,7 +1,7 @@
 package com.pr.gameserver.application.controller.ranking;
 
 import com.pr.gameserver.application.controller.ranking.dto.UpdateRankingDTO;
-import com.pr.gameserver.domain.entries.Ranking;
+import com.pr.gameserver.domain.entities.Ranking;
 import com.pr.gameserver.domain.interactors.RankingInteractor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

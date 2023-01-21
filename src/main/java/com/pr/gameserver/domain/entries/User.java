@@ -12,7 +12,7 @@ public class User {
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Getter
     @Setter
-    private Integer id;
+    private Long id;
 
     @Getter
     @Setter
